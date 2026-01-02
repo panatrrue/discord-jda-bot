@@ -1,7 +1,6 @@
 plugins {
-    java
     application
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "org.example"
