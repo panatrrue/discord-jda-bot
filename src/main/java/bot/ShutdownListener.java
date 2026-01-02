@@ -11,33 +11,31 @@ public class ShutdownListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
 
-        // ignorar bots
+        // ignore bots
         if (event.getAuthor().isBot()) {
             return;
         }
 
-        // validar owner
+        // owner validation
         if (event.getAuthor().getIdLong() != OWNER_ID) {
             return;
         }
 
-        // validar canal
+        // channel validation
         if (event.getChannel().getIdLong() != SHUTDOWN_CHANNEL_ID) {
             return;
         }
 
-        // comando exacto
+        // command
         if (!event.getMessage().getContentRaw().equals("!shutdown")) {
             return;
         }
 
         event.getChannel()
-                .sendMessage("Apagando bot...")
+                .sendMessage("Turning off bot...")
                 .queue();
 
         event.getJDA().shutdown();
-
-        // cierre duro de la JVM
         System.exit(0);
     }
 }

@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     implementation("net.dv8tion:JDA:5.0.0-beta.24")
+    implementation("ch.qos.logback:logback-classic:1.5.6")
 }
 
 java {

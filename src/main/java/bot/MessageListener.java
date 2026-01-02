@@ -24,7 +24,12 @@ public class MessageListener extends ListenerAdapter {
     );
 
     private final ScheduledExecutorService scheduler =
-            Executors.newSingleThreadScheduledExecutor();
+            Executors.newSingleThreadScheduledExecutor(r -> {
+                Thread t = new Thread(r, "message-delete-scheduler");
+                t.setDaemon(true);
+                return t;
+            });
+
 
     // messageId -> delete task
     private final Map<Long, ScheduledFuture<?>> pendingDeletes =
@@ -46,13 +51,13 @@ public class MessageListener extends ListenerAdapter {
             return;
         }
 
-        // -------- OTROS BOTS --------
+        // -------- OTHERS BOTS --------
         if (event.getAuthor().isBot()) {
             msg.delete().queue();
             return;
         }
 
-        // -------- USUARIOS --------
+        // -------- USERS --------
         String content = msg.getContentRaw();
 
         if (!content.startsWith(PREFIX)) {
