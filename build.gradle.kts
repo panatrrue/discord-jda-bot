@@ -20,5 +20,5 @@ java {
 }
 
 application {
-    mainClass.set("bot.Main")
+    mainClass.set("bot.Main") // <-- OBLIGATORIO
 }
