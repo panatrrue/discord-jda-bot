@@ -22,3 +22,9 @@ java {
 application {
     mainClass.set("bot.Main") // <-- OBLIGATORIO
 }
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "bot.Main"
+    }
+}
