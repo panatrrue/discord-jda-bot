@@ -1,5 +1,7 @@
 plugins {
+    java
     application
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "org.example"
@@ -20,11 +22,5 @@ java {
 }
 
 application {
-    mainClass.set("bot.Main") // <-- OBLIGATORIO
-}
-
-tasks.jar {
-    manifest {
-        attributes["Main-Class"] = "bot.Main"
-    }
+    mainClass.set("bot.Main")
 }
