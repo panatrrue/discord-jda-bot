@@ -1,0 +1,23 @@
+# Carpeta de compilación
+/build/
+
+# Fat JARs y librerías locales
+/libs/*.jar
+
+# Archivos de IDE
+/.idea/
+/*.iml
+
+# Token del bot o variables de entorno
+token.txt
+.env
+
+# Logs y temporales
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
