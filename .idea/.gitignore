@@ -1,5 +1,5 @@
-# Fat JARs y librerías locales
-/libs/*.jar
+# Carpeta de compilación
+/build/
 
 # Archivos de IDE
 /.idea/
