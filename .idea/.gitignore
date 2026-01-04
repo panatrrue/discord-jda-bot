@@ -1,3 +1,6 @@
+# Carpeta de compilación
+/build/
+
 # Fat JARs y librerías locales
 /libs/*.jar
 

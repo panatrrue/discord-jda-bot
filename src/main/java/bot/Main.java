@@ -26,7 +26,11 @@ public final class Main {
 
         String token;
         try {
-            token = Files.readString(Path.of(TOKEN_FILE)).trim();
+            token = System.getenv("BOT_TOKEN");
+            if (token == null || token.isBlank()) {
+                token = Files.readString(Path.of("token.txt")).trim();
+            }
+
         } catch (IOException e) {
             logger.error("Error leyendo el token desde {}", TOKEN_FILE, e);
             return;
