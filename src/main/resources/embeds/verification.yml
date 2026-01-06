@@ -1,0 +1,19 @@
+title: Lugar de Verificación
+description: Este aburrido paso nos ayuda con la seguridad del server.
+
+color: [46, 204, 113]
+
+thumbnail: check.png
+
+fields:
+  - name: "📜 Recuerda leer las reglas"
+    value: "Por acá te dejo el canal <#123456789012345678>"
+    inline: false
+
+  - name: "🔒 Seguridad"
+    value: "Este check nos ayuda para evitar bots."
+    inline: false
+
+  - name: "🤝 Gracias"
+    value: "Pequeñas acciones también contribuyen."
+    inline: false

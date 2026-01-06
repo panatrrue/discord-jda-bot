@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0979c2cd-91a3-4b44-aa8d-8ad9a8402297" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bot/SupportEmbedFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bot/YamlEmbedLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/embeds/verification.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/thumbnails/check.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/MessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/VerificationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/VerificationListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +64,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build untitled.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
     "Gradle.untitled [:bot.Main.main()].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -68,17 +75,24 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/panac/IdeaProjects/untitled/src/main/resources/thumbnails",
     "onboarding.tips.debug.path": "C:/Users/panac/IdeaProjects/untitled/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "settings.editor.selected.configurable": "proofread",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="bot" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\panac\IdeaProjects\untitled\src\main\resources\thumbnails" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\panac\IdeaProjects\untitled\src\main\resources\thumbnails" />
     </key>
   </component>
   <component name="RunManager">
@@ -127,6 +141,10 @@
       <workItem from="1767323356326" duration="1909000" />
       <workItem from="1767494834858" duration="234000" />
       <workItem from="1767495689535" duration="6611000" />
+      <workItem from="1767563490207" duration="2326000" />
+      <workItem from="1767651051463" duration="4430000" />
+      <workItem from="1767658933051" duration="2000" />
+      <workItem from="1767660585930" duration="3554000" />
     </task>
     <servers />
   </component>

@@ -65,7 +65,7 @@ public class MessageListener extends ListenerAdapter {
             return;
         }
 
-        scheduleDelete(msg, DELETE_DELAY_SECONDS);
+        scheduleDelete(msg);
     }
 
     @Override
@@ -83,13 +83,13 @@ public class MessageListener extends ListenerAdapter {
         }
     }
 
-    private void scheduleDelete(Message msg, long delaySeconds) {
+    private void scheduleDelete(Message msg) {
         long messageId = msg.getIdLong();
 
         ScheduledFuture<?> task = scheduler.schedule(() -> {
             msg.delete().queue();
             pendingDeletes.remove(messageId);
-        }, delaySeconds, TimeUnit.SECONDS);
+        }, MessageListener.DELETE_DELAY_SECONDS, TimeUnit.SECONDS);
 
         pendingDeletes.put(messageId, task);
     }
