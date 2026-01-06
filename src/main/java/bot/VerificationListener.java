@@ -100,10 +100,10 @@ public final class VerificationListener extends ListenerAdapter {
             if (!exists) {
                 try (InputStream is = getClass()
                         .getClassLoader()
-                        .getResourceAsStream("thumbnail/ckeck.png")) {
+                        .getResourceAsStream("thumbnails/ckeck.png")) {
 
                     if (is == null) {
-                        throw new IllegalStateException("thumbnail/ckeck.png was not found in resources.");
+                        throw new IllegalStateException("thumbnails/ckeck.png was not found in resources.");
                     }
 
                     channel.sendMessageEmbeds(embed)
@@ -112,7 +112,7 @@ public final class VerificationListener extends ListenerAdapter {
                             .queue();
 
                 } catch (IOException e) {
-                    throw new RuntimeException("Error closing InputStream of the thumbnail", e);
+                    throw new RuntimeException("Error closing InputStream of the thumbnails", e);
                 }
             }
 
