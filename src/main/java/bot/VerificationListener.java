@@ -100,14 +100,14 @@ public final class VerificationListener extends ListenerAdapter {
             if (!exists) {
                 try (InputStream is = getClass()
                         .getClassLoader()
-                        .getResourceAsStream("thumbnails/ckeck.png")) {
+                        .getResourceAsStream("thumbnails/check.png")) {
 
                     if (is == null) {
-                        throw new IllegalStateException("thumbnails/ckeck.png was not found in resources.");
+                        throw new IllegalStateException("thumbnails/check.png was not found in resources.");
                     }
 
                     channel.sendMessageEmbeds(embed)
-                            .addFiles(FileUpload.fromData(is, "ckeck.png"))
+                            .addFiles(FileUpload.fromData(is, "check.png"))
                             .setActionRow(Button.success(buttonId, "Verificarme"))
                             .queue();
 

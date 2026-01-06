@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0979c2cd-91a3-4b44-aa8d-8ad9a8402297" name="Changes" comment="" />
+    <list default="true" id="0979c2cd-91a3-4b44-aa8d-8ad9a8402297" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/VerificationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/VerificationListener.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +137,7 @@
       <workItem from="1767563490207" duration="2326000" />
       <workItem from="1767651051463" duration="4430000" />
       <workItem from="1767658933051" duration="2000" />
-      <workItem from="1767660585930" duration="4236000" />
+      <workItem from="1767660585930" duration="4891000" />
     </task>
     <servers />
   </component>
