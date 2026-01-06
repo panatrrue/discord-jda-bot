@@ -9,6 +9,8 @@ import net.dv8tion.jda.api.interactions.components.buttons.Button;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.utils.FileUpload;
 import org.jetbrains.annotations.NotNull;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,6 +20,7 @@ public final class VerificationListener extends ListenerAdapter {
     private final long unverifiedRoleId;
     private final long memberRoleId;
     private final String buttonId;
+    private static final Logger LOGGER = LoggerFactory.getLogger(VerificationListener.class);
 
     public VerificationListener(long unverifiedRoleId,
                                 long memberRoleId,
@@ -98,6 +101,8 @@ public final class VerificationListener extends ListenerAdapter {
                     );
 
             if (!exists) {
+                byte[] imageBytes;
+
                 try (InputStream is = getClass()
                         .getClassLoader()
                         .getResourceAsStream("thumbnails/check.png")) {
@@ -106,15 +111,20 @@ public final class VerificationListener extends ListenerAdapter {
                         throw new IllegalStateException("thumbnails/check.png was not found in resources.");
                     }
 
-                    channel.sendMessageEmbeds(embed)
-                            .addFiles(FileUpload.fromData(is, "check.png"))
-                            .setActionRow(Button.success(buttonId, "Verificarme"))
-                            .queue();
+                    imageBytes = is.readAllBytes();
 
                 } catch (IOException e) {
-                    throw new RuntimeException("Error closing InputStream of the thumbnails", e);
+                    // Log + abortar envío
+                    LOGGER.error("Failed to load thumbnails/check.png from resources", e);
+                    return;
                 }
+
+                channel.sendMessageEmbeds(embed)
+                        .addFiles(FileUpload.fromData(imageBytes, "check.png"))
+                        .setActionRow(Button.success(buttonId, "Verificarme"))
+                        .queue();
             }
+
 
         });
     }
